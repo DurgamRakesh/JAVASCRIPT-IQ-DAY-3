@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-IQ-DAY-3</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <h1>JAVASCRIPT INTERVIEW QUESTIONS PREPARATION DAY-3</h1>
+
+    <p>15.How many operators do we have in JS ?</p>
+    <pre>
+        IN JS, we have 6 types of operators and they are:
+        1.Aithmatic operators : + , - , * , / , %
+        2.Comparison operators : == , === , != , !== , < , <= , > , >=
+        3.Logical operators : && , || , !
+        4.Assignment operators : = , += , -= , *= , /= , %=
+        5.Conditional operators : =
+        6.Ternary operators: ? :
+    </pre>
+    <p>16.What are arrow functions?</p>
+    <pre>
+        IN JS, Arrow functions are also called as "fat arrow"(=>) functions.
+        -Arrow functions are new way of writing functions in js without using function keyword and return keyword.
+        -It was introduced in ES6.
+        -We are omit curly braces and function and return keyword.
+        -Arrow functions are assigned to a variable.
+
+        EX:
+        let arrow = (a,b) => a*b;
+        console.log(arrow(5,6));
+    </pre>
+    <p>17.Difference between undefined vs not defined vs NaN?</p>
+    <pre>
+        Undefined:
+        Means  a variable declated but not assigned any value.
+        var a; 
+
+        Not defined:
+        Means the variable is yet declated.
+        -It indicates that accessed variable does not exist in the memory
+        so it will give undefined.
+        console.log(a);
+
+        NaN: stands for Not a Number. it is a special value of the NaN property of global object.
+        -NaN indicates a failed operation on number.
+        -isNaN() function to check if a value is NaN.
+    </pre>
+    <p>18.What is callback hell?</p>
+    <pre>
+        IN JS, Callback hell is function with nested callbacks which makes code hard to read and debug
+        when dealing with ansychronus logic.
+        -The callback hell looks like pyramid structure.
+        EX:
+        setTimeout(()=>{
+            console.log(1);
+            setTimeout(()=>{
+                console.log(2);
+                setTimeout(()=>{
+                    console.log(3);
+                },3000);
+            },2000);
+        },1000);
+    </pre>
+    <p>19.Please explain Self Invoking Function and its code?</p>
+    <pre>
+        IN JS, An IIFE(immediatly Invoked function expression) is a javascript function that runs as soon
+        as it declated.()().
+        -Also known as self Invoking function anonymous function.
+
+        EX:
+        (function self(){
+            console.log('this is IIFE function')
+        })()
+
+        -The primary reason for to use this IIFE is to obtain data privacy.
+        because any variable declated with IIFE cannot accessed outside of function.
+        if we try it will give error
+    </pre>
+    <p>20.What is the use of setTimeout?</p>
+    <pre>
+        The setTimeout() method executes a function or block of code after the specified time expires.
+        -The method execute the code only once.
+
+        SYNTAX: setTimeout(function,time);
+
+        EX:
+        setTimeout(()=>{
+            console.log('this is setTimeout function')
+        },5000)
+    </pre>
+    <script src="./main.js"></script>
+</body>
+</html>
